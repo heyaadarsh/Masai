@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header & Fixed Footer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            z-index: 1000;
+        }
+
+        /* Fixed Footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 20px;
+            margin-bottom: 50px; /* Space before footer */
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Sticky Header - Always on Top
+    </div>
+
+    <div class="content">
+        <h2>Scroll Down to See Sticky and Fixed Effects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, metus ac tincidunt tempus, nisl libero bibendum risus.</p>
+        <p>Curabitur sed enim eu urna vehicula scelerisque. Duis malesuada turpis ut magna aliquet efficitur.</p>
+        <p>Vivamus pharetra tincidunt dui, at fermentum magna consequat id.</p>
+        <p>Etiam interdum orci et augue sagittis, ut fermentum velit suscipit.</p>
+        <p>Integer fermentum mi a semper gravida. Duis eget orci nec magna aliquet volutpat.</p>
+        <p>Phasellus vel leo vel nulla vehicula posuere non sed quam.</p>
+        <p>Praesent hendrerit sapien at neque fringilla facilisis.</p>
+        <p>Aenean congue libero sed sapien volutpat, ac congue velit vulputate.</p>
+        <p>Fusce at eros eget enim scelerisque volutpat.</p>
+        <p>Nulla nec metus eu elit posuere mollis at nec ligula.</p>
+    </div>
+
+    <div class="footer">
+        Fixed Footer - Always at Bottom
+    </div>
+
+</body>
+</html>
