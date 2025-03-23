@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .block-element {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            background-color: lightcoral;
+            border: 2px solid black;
+        }
+
+        .inline-element {
+            display: inline;
+            background-color: lightblue;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .inline-block-element {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 50px;
+            border: 2px solid black;
+        }
+
+        .hidden-element {
+            display: none;
+            width: 200px;
+            padding: 10px;
+            background-color: lightgray;
+            border: 2px solid black;
+        }
+
+        .toggle-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="block-element">I am a Block Element</div>
+        <span class="inline-element">I am an Inline Element</span>
+        <div class="inline-block-element">I am Inline-Block</div>
+        <div id="hidden-box" class="hidden-element">I was hidden!</div>
+        
+        <button class="toggle-btn" onclick="toggleVisibility()">Toggle Hidden Element</button>
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            let hiddenBox = document.getElementById("hidden-box");
+            if (hiddenBox.style.display === "none") {
+                hiddenBox.style.display = "block";
+            } else {
+                hiddenBox.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
