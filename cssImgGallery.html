@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            gap: 10px;
+        }
+
+        .left {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex: 2;
+        }
+
+        .left .image-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .image-box img {
+            width: calc(50% - 5px);
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .right img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .image-box img {
+                width: calc(50% - 5px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-box img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="left">
+            <div class="image-box">
+                <img src="https://picsum.photos/200" alt="Placeholder">
+                <img src="https://picsum.photos/201" alt="Placeholder">
+                <img src="https://picsum.photos/202" alt="Placeholder">
+                <img src="https://picsum.photos/203" alt="Placeholder">
+            </div>
+            <div class="image-box">
+                <img src="https://picsum.photos/204" alt="Placeholder">
+                <img src="https://picsum.photos/205" alt="Placeholder">
+                <img src="https://picsum.photos/206" alt="Placeholder">
+                <img src="https://picsum.photos/207" alt="Placeholder">
+            </div>
+        </div>
+        <div class="right">
+            <img src="https://picsum.photos/300" alt="Placeholder">
+            <img src="https://picsum.photos/301" alt="Placeholder">
+            <img src="https://picsum.photos/302" alt="Placeholder">
+        </div>
+    </div>
+</body>
+</html>
